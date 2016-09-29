@@ -1,6 +1,9 @@
 # idea files
 .idea
 
+# ignore build output
+dist
+
 # Logs
 logs
 *.log
