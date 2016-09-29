@@ -8,7 +8,7 @@ details around the basics of Vue.js.
 ## first impression
 
 I'm a seasoned JS developer, but new to the Vue.js world. I'm finding
-(so far) that it seems to by rythmically similar to Backbone.js. If
+(so far) that it seems to be rhythmically similar to Backbone.js. If
 you're comfortable working with Backbone, then I think you might feel
 right at home with Vue.js vs. some of the other offerings such as
 React or Angular2.
