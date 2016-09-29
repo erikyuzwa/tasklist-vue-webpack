@@ -1,5 +1,12 @@
 
-$primary-font: 'Helvetica', sans-serif;
+/**
+* Sass definition file for our tasklist application. Defining some variables that we reference
+* throughout the sass makes it easier to tweak and/or add themeing support
+*
+* You can call your sass variables however you want, but in most apps I've worked on there's been a loose
+* convention used of "primary" and "secondary". YMMV
+*/
+$primary-font: 'Tahoma', sans-serif;
 $primary-color: #eff1f2;
 $primary-background-color: #3465A4;
 $primary-label-color: #ffffff;
@@ -37,11 +44,8 @@ li {
 
 .panel,
 li {
-  /* Use flexbox */
   display: flex;
-  /* Center everything inside .panel and li vertically */
   align-items: center;
-  /* Distribute space evenly between the contents*/
   justify-content: space-between;
   list-style-type: none;
   padding: 10px;
@@ -74,8 +78,6 @@ button {
 }
 
 
-/* Task  area */
-
 .list li {
   background-color: $primary-background-color;
 
@@ -83,7 +85,6 @@ button {
     background-color: transparent;
     border: 1px solid $primary-background-color;
     color: $primary-label-color;
-    /* Hide the delete button by default*/
     visibility: hidden;
     font-size: 20px;
     font-weight: bold;
@@ -103,7 +104,6 @@ button {
 
 
 .list li:hover > .delete {
-  /* Show the delete button when hovering over each list item */
   visibility: visible;
 }
 
@@ -112,8 +112,6 @@ button {
   text-decoration: line-through;
 }
 
-
-/* Media Queries */
 
 @media screen and (max-width: 768px) {
   .container {

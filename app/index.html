@@ -12,7 +12,6 @@
 
         <div class="container" id="todo">
             <h2 class="center">{{ label.title }}</h2>
-            
             <section class="panel">
 
                 <input type="checkbox" id="mark-all" v-bind:checked="areAllSelected" v-on:click="selectAll">
@@ -21,7 +20,6 @@
                 <button class="red" v-on:click="clearAll"><i class="fa fa-trash" aria-hidden="true"></i> {{ label.clearAll }}</button>
 
             </section>
-
 
             <ul class="list">
 
