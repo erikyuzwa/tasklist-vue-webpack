@@ -11,6 +11,7 @@ var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var util = require('gulp-util');
 var webpack = require('webpack-stream');
+var htmlreplace = require('gulp-html-replace');
 var fs = require('fs');
 
 /**
@@ -31,6 +32,19 @@ gulp.task('sass', function () {
   return gulp.src('./app/styles/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./app/styles/'));
+});
+
+/**
+ * When we're finally happy with our dev work, the dist task will go through our index.html
+ * and drop in things like GA snippet, git ribbons, etc.
+ */
+gulp.task('replace', function() {
+  gulp.src(['./app/index.html'])
+    .pipe(htmlreplace({
+        'ribbon': '<a href="https://github.com/erikyuzwa/tasklist-vue-webpack"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>',
+        'ga': "<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-40489093-2', 'auto');ga('send', 'pageview');</script>"
+    }))
+    .pipe(gulp.dest('dist/'));
 });
 
 /**
@@ -56,3 +70,8 @@ gulp.task('move-client', ['lint', 'sass'], function () {
 
 /** our basic gulp task is to run the build-client task */
 gulp.task('default', ['build-client']);
+
+/** when we're ready to deploy to a production site, use our string replace to drop in things
+ * like GA or tracking snippets, a github ribbon, etc.
+ */
+gulp.task('package', ['build-client', 'replace']);
