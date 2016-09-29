@@ -1,8 +1,17 @@
 # tasklist-vue-webpack
 
-a basic tasklist app using Vue.js and Webpack. On my TODO list (ha!)
-is to create a proper blog post with some more details around the
-basics of Vue.js.
+a basic tasklist app using Vue.js and Webpack. 
+
+On my TODO list (ha!) is to create a proper blog post with some more 
+details around the basics of Vue.js.
+
+## first impression
+
+I'm a seasoned JS developer, but new to the Vue.js world. I'm finding
+(so far) that it seems to by rythmically similar to Backbone.js. If
+you're comfortable working with Backbone, then I think you might feel
+right at home with Vue.js vs. some of the other offerings such as
+React or Angular2.
 
 ## installation
 
