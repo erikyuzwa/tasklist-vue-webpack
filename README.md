@@ -1,6 +1,8 @@
 # tasklist-vue-webpack
+
 a basic tasklist app using Vue.js and Webpack. On my TODO list (ha!)
-is to create a proper blog post describing this process.
+is to create a proper blog post with some more details around the
+basics of Vue.js.
 
 ## installation
 

@@ -4,6 +4,9 @@
 # ignore build output
 dist
 
+# ignore generated css
+app/styles/*.css
+
 # Logs
 logs
 *.log
