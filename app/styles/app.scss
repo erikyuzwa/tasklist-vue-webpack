@@ -1,0 +1,126 @@
+
+$primary-font: 'Helvetica', sans-serif;
+$primary-color: #eff1f2;
+$primary-background-color: #3465A4;
+$primary-label-color: #ffffff;
+$secondary-background-color: #ff5722;
+$grey-color: rgb(150,150,150);
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.pageContainer {
+    background-color: $primary-label-color;
+    line-height: 1;
+    font-family: $primary-font;
+}
+
+.container {
+  width: 80%;
+  margin: 1em auto 3em;
+
+  h2.center {
+      text-align: center;
+      color: $primary-background-color;
+  }
+
+}
+
+.panel,
+li {
+  /* Use flexbox */
+  display: flex;
+  /* Center everything inside .panel and li vertically */
+  align-items: center;
+  /* Distribute space evenly between the contents*/
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 10px;
+  border-bottom: 1px solid #efefef;
+  background-color: $grey-color;
+}
+
+.text-input {
+  border: 1px solid #dedede;
+  padding-left: 10px;
+  width: 60%;
+  height: 35px;
+  color: #555;
+}
+
+button {
+  color: $primary-label-color;
+  background-color: $primary-background-color;
+  border: 1px solid #bbb;
+  outline: 0;
+  width: 100px;
+  height: 38px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.red {
+    color: $primary-label-color;
+    background-color: rgb(255,0,0); 
+}
+
+
+/* Task  area */
+
+.list li {
+  background-color: $primary-background-color;
+
+  .delete {
+    background-color: transparent;
+    border: 1px solid $primary-background-color;
+    color: $primary-label-color;
+    /* Hide the delete button by default*/
+    visibility: hidden;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  label {
+    padding-right: 10px;
+    display: inline-block;
+    width: 70%;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fcfcfc;
+    z-index: 2;
+    overflow: hidden;
+  }
+}
+
+
+.list li:hover > .delete {
+  /* Show the delete button when hovering over each list item */
+  visibility: visible;
+}
+
+.list li.done label {
+  color: #d9d9d9;
+  text-decoration: line-through;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    max-width: 90%;
+  }
+  button {
+    width: 80px;
+  }
+}

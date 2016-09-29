@@ -1,0 +1,18 @@
+{
+    "globals": {
+
+    },
+    "node": true,
+    "browser": true,
+    "esnext": true,
+    "bitwise": true,
+    "curly": true,
+    "eqeqeq": true,
+    "indent": 2,
+    "noarg": true,
+    "undef": true,
+    "strict": true,
+    "trailing": true,
+    "smarttabs": true,
+    "white": true
+}

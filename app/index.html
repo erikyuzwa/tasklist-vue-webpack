@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="styles/app.css" />
+</head>
+<body>
+    <div class="pageContainer">
+
+        <div class="container" id="todo">
+            <h2 class="center">{{ label.title }}</h2>
+            
+            <section class="panel">
+
+                <input type="checkbox" id="mark-all" v-bind:checked="areAllSelected" v-on:click="selectAll">
+                <input type="text" placeholder="{{ label.inputPlaceholder }}" autofocus class="text-input" v-model="currentTask" v-on:keyup.enter="addTask">
+                <button v-on:click="addTask"><i class="fa fa-plus-square" aria-hidden="true"></i> {{ label.add }}</button>
+                <button class="red" v-on:click="clearAll"><i class="fa fa-trash" aria-hidden="true"></i> {{ label.clearAll }}</button>
+
+            </section>
+
+
+            <ul class="list">
+
+                <li v-for="task in taskList" v-bind:class="{done: task.checked}">
+
+                <input type="checkbox" class="checkbox" v-model="task.checked">
+
+                <label for="checkbox">{{ task.text }}</label>
+
+                <button class="delete" v-on:click="removeTask(task)">X</button>
+
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+
+    <script src="bundle.js"></script>
+
+</body>
+</html>

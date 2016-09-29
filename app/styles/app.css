@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+.pageContainer {
+  background-color: #ffffff;
+  line-height: 1;
+  font-family: "Helvetica", sans-serif; }
+
+.container {
+  width: 80%;
+  margin: 1em auto 3em; }
+  .container h2.center {
+    text-align: center;
+    color: #3465A4; }
+
+.panel,
+li {
+  /* Use flexbox */
+  display: flex;
+  /* Center everything inside .panel and li vertically */
+  align-items: center;
+  /* Distribute space evenly between the contents*/
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 10px;
+  border-bottom: 1px solid #efefef;
+  background-color: #969696; }
+
+.text-input {
+  border: 1px solid #dedede;
+  padding-left: 10px;
+  width: 60%;
+  height: 35px;
+  color: #555; }
+
+button {
+  color: #ffffff;
+  background-color: #3465A4;
+  border: 1px solid #bbb;
+  outline: 0;
+  width: 100px;
+  height: 38px;
+  cursor: pointer;
+  font-size: 14px; }
+
+.red {
+  color: #ffffff;
+  background-color: red; }
+
+/* Task  area */
+.list li {
+  background-color: #3465A4; }
+  .list li .delete {
+    background-color: transparent;
+    border: 1px solid #3465A4;
+    color: #ffffff;
+    /* Hide the delete button by default*/
+    visibility: hidden;
+    font-size: 20px;
+    font-weight: bold; }
+  .list li label {
+    padding-right: 10px;
+    display: inline-block;
+    width: 70%;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fcfcfc;
+    z-index: 2;
+    overflow: hidden; }
+
+.list li:hover > .delete {
+  /* Show the delete button when hovering over each list item */
+  visibility: visible; }
+
+.list li.done label {
+  color: #d9d9d9;
+  text-decoration: line-through; }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    max-width: 90%; }
+  button {
+    width: 80px; } }
