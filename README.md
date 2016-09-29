@@ -5,6 +5,8 @@ a basic tasklist app using Vue.js and Webpack.
 On my TODO list (ha!) is to create a proper blog post with some more 
 details around the basics of Vue.js.
 
+demo at - http://www.demos.erikyuzwa.com/tasklist-vue-webpack/index.html
+
 ## first impression
 
 I'm a seasoned JS developer, but new to the Vue.js world. I'm finding
