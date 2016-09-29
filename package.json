@@ -4,6 +4,7 @@
   "description": "a test TODO app using Vue.js and webpack",
   "main": "app/index.html",
   "scripts": {
+    "build": "gulp && gulp replace",
     "start": "gulp && webpack-dev-server --content-base dist/"
   },
   "author": "erik@erikyuzwa.com",

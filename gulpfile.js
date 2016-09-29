@@ -71,7 +71,3 @@ gulp.task('move-client', ['lint', 'sass'], function () {
 /** our basic gulp task is to run the build-client task */
 gulp.task('default', ['build-client']);
 
-/** when we're ready to deploy to a production site, use our string replace to drop in things
- * like GA or tracking snippets, a github ribbon, etc.
- */
-gulp.task('package', ['build-client', 'replace']);
