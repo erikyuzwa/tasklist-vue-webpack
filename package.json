@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.16.0",
+    "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-jshint": "^2.0.1",
     "gulp-sass": "^2.3.2",
